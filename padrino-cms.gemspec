@@ -1,8 +1,6 @@
 #!/usr/bin/env gem build
 # encoding: utf-8
 
-require File.expand_path("../../padrino-core/lib/padrino-core/version.rb", __FILE__)
-
 Gem::Specification.new do |s|
   s.name = "padrino-cms"
   s.rubyforge_project = "padrino-cms"
@@ -12,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/steventux/padrino-cms"
   s.description = "Content fragments, components and pages for Padrino applications"
   s.required_rubygems_version = ">= 1.3.6"
-  s.version = Padrino.version
+  s.version = "0.0.1"
   s.date = Time.now.strftime("%Y-%m-%d")
 
   s.extra_rdoc_files = Dir["*.rdoc"]
@@ -22,7 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rdoc_options  = ["--charset=UTF-8"]
 
-  s.add_dependency("padrino-core", Padrino.version)
-  s.add_dependency("padrino-helpers", Padrino.version)
-  s.add_dependency("padrino-admin", Padrino.version)
+  s.add_dependency("padrino-core")
+  s.add_dependency("padrino-helpers")
+  s.add_dependency("padrino-admin")
 end
