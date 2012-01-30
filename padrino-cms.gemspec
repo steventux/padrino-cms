@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.rdoc_options  = ["--charset=UTF-8"]
 
   s.add_dependency("padrino-core")
+  s.add_dependency("padrino-gen")
   s.add_dependency("padrino-helpers")
   s.add_dependency("padrino-admin")
 end

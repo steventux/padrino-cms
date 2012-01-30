@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require File.dirname(__FILE__) + '/../lib/padrino-cms/lib/padrino_cms'
+PadrinoCms.new(ARGV)
