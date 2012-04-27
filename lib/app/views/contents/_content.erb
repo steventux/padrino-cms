@@ -1,0 +1,8 @@
+<div class="content">
+  <div class="title"><%= link_to content.title, url_for(:contents, :show, :id => content) %></div>
+  <div class="date"><%= time_ago_in_words(content.created_at || Time.now) + ' ago' %></div>
+  <div class="body"><%= simple_format(content.body) %></div>
+  <div class="details">
+    <div class="author">Posted by <%= content.account.email %></div>
+  </div>
+</div>

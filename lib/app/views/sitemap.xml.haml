@@ -1,0 +1,9 @@
+- base_url = "http://#{request.host_with_port}"
+!!! XML
+%urlset{:xmlns => "http://www.sitemaps.org/schemas/sitemap/0.9"}
+  - for page in @pages
+    %url
+      %loc #{base_url}#{page.path}
+      %lastmod=page.updated_at
+      %changefreq monthly
+      %priority 0.5

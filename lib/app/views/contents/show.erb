@@ -1,0 +1,12 @@
+<% @title = @content.title %>
+<div id="show">
+  <div class="content">
+    <div class="title"><%= @content.title%></div>
+    <div class="date"><%= time_ago_in_words(@content.created_at || Time.now) + ' ago' %></div>
+    <div class=".body"><%= simple_format(@content.body) %></div>
+    <div class="details">
+      <div class="author">Posted by <%= @content.account.email %></div>
+    </div>
+  </div>
+</div>
+<p><%= link_to 'View all contents', url_for(:contents, :index) %></p>

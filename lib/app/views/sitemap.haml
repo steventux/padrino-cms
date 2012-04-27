@@ -1,0 +1,11 @@
+!!! Strict
+%html
+  %head
+    %title= [@title, "Simple Padrino CMS"].compact.join(" | ")
+  %body
+    %h1= @title
+    %ul
+      - for page in @pages
+        %li
+          %a{:href => page.path}= page.title
+        

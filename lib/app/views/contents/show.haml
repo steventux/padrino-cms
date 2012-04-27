@@ -1,0 +1,9 @@
+- @title = @content.title
+#show
+  .content
+    .title= @content.title
+    .date= time_ago_in_words(@content.created_at || Time.now) + ' ago'
+    .body= simple_format(@content.body)
+    .details
+      .author Posted by \#{@content.account.email}
+%p= link_to 'View all contents', url_for(:contents, :index)

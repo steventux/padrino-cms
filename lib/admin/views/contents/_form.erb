@@ -1,0 +1,29 @@
+<%= f.hidden_field :account_id %>
+
+<div class="group">
+  <%= f.label :path %><%= f.error_message_on :path %>
+  <%= f.text_field :path, :class => :text_field %>
+  <span class="description">This is the path to your content e.g. <em>/about-us</em></span>
+</div>
+<div class="group">
+  <%= f.label :title %><%= f.error_message_on :title %>
+  <%= f.text_field :title, :class => :text_field %>
+  <span class="description">The title of this piece of content</span>
+</div>
+<div class="group">
+  <%= f.label :subtitle %><%= f.error_message_on :subtitle %>
+  <%= f.text_field :subtitle, :class => :text_field %>
+</div>
+<div class="group">
+  <%= f.label :body %><%= f.error_message_on :body %>
+  <%= f.text_area :body, :class => :text_area %>
+</div>
+<div class="group">
+  <%= f.label :status %><%= f.error_message_on :status %>
+  <%= f.text_field :status, :class => :text_field %>
+</div>
+
+<div class="group navform wat-cf">
+  <%= f.submit pat(:save), :class => :button %>
+  <%= f.submit pat(:cancel), :onclick => "window.location='#{url(:accounts, :index)}';return false", :class => :button %>
+</div>

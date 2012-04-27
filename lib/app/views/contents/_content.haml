@@ -1,0 +1,6 @@
+.content
+  .title= link_to content.title, url_for(:contents, :show, :id => content)
+  .date= time_ago_in_words(content.created_at || Time.now) + ' ago'
+  .body= simple_format(content.body)
+  .details
+    .author Posted by \#{content.account.email}
