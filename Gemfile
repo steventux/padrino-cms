@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'bcrypt-ruby'
+gem "bcrypt-ruby", :require => "bcrypt"
 gem 'multi_json'
 gem 'rake'
 gem "thor"
