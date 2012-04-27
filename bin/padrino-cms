@@ -8,10 +8,7 @@ require 'padrino-gen'
 require 'padrino-core/support_lite' unless defined?(SupportLite)
 require 'padrino-admin'
 
-#padrino_cms_path = File.expand_path('../lib', __FILE__)
-#$:.unshift(padrino_cms_path) if File.directory?(padrino_cms_path) && !$:.include?(padrino_cms_path)
-
-require File.expand_path('../../lib/cms', __FILE__)
+require File.expand_path('../../lib/padrino-cms/padrino_cms', __FILE__)
 
 # We need our config boot because we need to load registered generators so:
 Padrino::Generators::Cms.start(ARGV)

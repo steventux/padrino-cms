@@ -17,7 +17,7 @@ module Padrino
       else
         begin
           cms_project_name = ARGV[0]
-          Padrino::Generators::Project.start([cms_project_name, "--root=..", "--template=#{template_path}", "--debug=true"])
+          Padrino::Generators::Project.start([cms_project_name, "--root=.", "--template=#{template_path}", "--debug=true"])
         rescue Exception => e
           puts e.backtrace
         end
