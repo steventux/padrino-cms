@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/steventux/padrino-cms"
   s.description = "Content fragments, components and pages for Padrino applications"
   s.required_rubygems_version = ">= 1.3.6"
-  s.version = "0.0.1"
+  s.version = "0.1.0"
   s.date = Time.now.strftime("%Y-%m-%d")
 
   s.extra_rdoc_files = Dir["*.rdoc"]
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rdoc_options  = ["--charset=UTF-8"]
 
+  s.add_dependency("bcrypt-ruby")
   s.add_dependency("padrino-core")
   s.add_dependency("padrino-gen")
   s.add_dependency("padrino-helpers")
