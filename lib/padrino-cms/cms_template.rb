@@ -139,6 +139,8 @@ IMAGE_UPLOAD_GEMS = <<-GEMS
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'vestal_versions', :git => "git://github.com/futurechimp/vestal_versions.git"
+gem 'diffrent'
 
 GEMS
 
@@ -151,15 +153,6 @@ HELPER_METHODS = <<-HELPER
 HELPER
 
 inject_into_file 'app/helpers/contents_helper.rb', HELPER_METHODS, :after => ".helpers do\n"
-
-
-#CONTENT_FORM_PATH_FIELD = <<-CONTENT
-#  -if params[:path]
-#    =f.hidden_field :path, :value => params[:path]
-#  -else
-#CONTENT
-
-#inject_into_file 'admin/views/contents/_form.haml', CONTENT_FORM_PATH_FIELD, :before => "   =f.label :path"
 
 get 'https://github.com/padrino/sample_blog/raw/master/public/stylesheets/reset.css', 'public/stylesheets/reset.css'
 # get "https://github.com/padrino/sample_blog/raw/master/app/stylesheets/application.less", 'app/stylesheets/application.sass'
