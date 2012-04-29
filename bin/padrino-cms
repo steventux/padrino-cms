@@ -9,7 +9,7 @@ require 'padrino-core/support_lite' unless defined?(SupportLite)
 require 'padrino-admin'
 require 'bcrypt'
 
-require File.expand_path('../../lib/padrino-cms/padrino_cms', __FILE__)
+require File.expand_path('../../lib/padrino_cms/padrino_cms', __FILE__)
 
 # We need our config boot because we need to load registered generators so:
-Padrino::Generators::Cms.start(ARGV)
+PadrinoCms.start(ARGV)
