@@ -1,3 +1,8 @@
+## Important Note
+
+This is currently unmaintained, it's not working with the latest Padrino releases.
+I'm happy to review and merge pull requests to fix it. I will get round to updating this project very very soon.
+
 ## Padrino CMS
 
 This gem provides a simple content management solution for Padrino.
